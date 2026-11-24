@@ -1,0 +1,90 @@
+[project]
+name = "nvs-observation"
+version = "0.1.0.dev0"
+description = "NVS observation-side capture and edge integration (Apache-2.0)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Gemmina Intelligence LLC" }]
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.urls]
+Homepage = "https://github.com/GemminAI/nvs-observation"
+Repository = "https://github.com/GemminAI/nvs-observation"
+Issues = "https://github.com/GemminAI/nvs-observation/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nvs_observation"]
+
+[tool.hatch.build.targets.sdist]
+# Exactly the public allowlist (public-sync/allowlist.txt): nothing else enters the sdist.
+# (hatch always adds pyproject.toml and PKG-INFO.) Keep in sync with the allowlist;
+# a test in public-sync/tests compares the two.
+include = [
+    "/LICENSE",
+    "/NOTICE",
+    "/README.md",
+    "/kernel-api-registry.json",
+    "/src/nvs_observation/__init__.py",
+    "/src/nvs_observation/py.typed",
+    "/src/nvs_observation/adapter_session.py",
+    "/src/nvs_observation/capture_check.py",
+    "/src/nvs_observation/capture_edge.py",
+    "/src/nvs_observation/capture_extra.py",
+    "/src/nvs_observation/capture_map.py",
+    "/src/nvs_observation/contract_build.py",
+    "/src/nvs_observation/contract_check.py",
+    "/src/nvs_observation/edge_observe.py",
+    "/src/nvs_observation/origin_map.py",
+    "/src/nvs_observation/contracts/__init__.py",
+    "/src/nvs_observation/contracts/capture_record.py",
+    "/src/nvs_observation/contracts/constants.py",
+    "/tests/_edge_refs.py",
+    "/tests/test_boundary.py",
+    "/tests/test_contract_check.py",
+    "/tests/test_registry.py",
+    "/tests/fixtures/contract-facts-sample.json",
+    "/tests/fixtures/contract-v2-sample.json",
+    "/.github/workflows/ci.yml",
+    "/.gitignore",
+    "/public-sync/allowlist.txt",
+    "/public-sync/export_public.py",
+    "/public-sync/check_allowlist.py",
+    "/public-sync/audit_artifacts.py",
+    "/public-sync/audit-rules.toml",
+    "/public-sync/tests/test_audit_artifacts.py",
+    "/public-sync/tests/test_check_allowlist.py",
+    "/public-sync/tests/test_export_public.py",
+    "/public-sync/tests/test_sdist_config.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+plugins = []
+
+[[tool.mypy.overrides]]
+# nvs_edge is optional and ships no type information, so mypy treats every name from it as Any.
+# Narrowed to this one package rather than loosening the strict settings above.
+module = ["nvs_edge.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

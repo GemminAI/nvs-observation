@@ -1,0 +1,39 @@
+# nvs-observation public allowlist.
+# One file per line, relative to packages/nvs-observation. Default: NOT listed.
+# Anything not listed here is never published.
+pyproject.toml
+LICENSE
+NOTICE
+README.md
+kernel-api-registry.json
+src/nvs_observation/__init__.py
+src/nvs_observation/py.typed
+src/nvs_observation/adapter_session.py
+src/nvs_observation/capture_check.py
+src/nvs_observation/capture_edge.py
+src/nvs_observation/capture_extra.py
+src/nvs_observation/capture_map.py
+src/nvs_observation/contract_build.py
+src/nvs_observation/contract_check.py
+src/nvs_observation/edge_observe.py
+src/nvs_observation/origin_map.py
+src/nvs_observation/contracts/__init__.py
+src/nvs_observation/contracts/capture_record.py
+src/nvs_observation/contracts/constants.py
+tests/_edge_refs.py
+tests/test_boundary.py
+tests/test_contract_check.py
+tests/test_registry.py
+tests/fixtures/contract-facts-sample.json
+tests/fixtures/contract-v2-sample.json
+.github/workflows/ci.yml
+.gitignore
+public-sync/allowlist.txt
+public-sync/export_public.py
+public-sync/check_allowlist.py
+public-sync/audit_artifacts.py
+public-sync/audit-rules.toml
+public-sync/tests/test_audit_artifacts.py
+public-sync/tests/test_check_allowlist.py
+public-sync/tests/test_export_public.py
+public-sync/tests/test_sdist_config.py

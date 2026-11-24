@@ -1,0 +1,340 @@
+[
+  {
+    "api_id": "nvs_edge",
+    "module": "nvs_edge",
+    "name": null,
+    "condition": "capture_edge.load_capture_edge: prove the package is importable before loading submodules",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract",
+    "module": "nvs_edge.contract",
+    "name": null,
+    "condition": "capture_edge.load_capture_edge: import submodule listed in the load loop",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2",
+    "module": "nvs_edge.contract_v2",
+    "name": null,
+    "condition": "capture_edge.load_capture_edge: import submodule listed in the load loop",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_store",
+    "module": "nvs_edge.raw_store",
+    "name": null,
+    "condition": "capture_edge.load_capture_edge and edge_observe._load_nvs_edge: import the raw_store submodule",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_nd",
+    "module": "nvs_edge.raw_nd",
+    "name": null,
+    "condition": "capture_edge.load_capture_edge: import submodule listed in the load loop",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.client",
+    "module": "nvs_edge.client",
+    "name": null,
+    "condition": "capture_edge.load_capture_edge: import submodule listed in the load loop",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.edge",
+    "module": "nvs_edge.edge",
+    "name": null,
+    "condition": "edge_observe._load_nvs_edge: import the edge submodule once at module import",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract.ContractError",
+    "module": "nvs_edge.contract",
+    "name": "ContractError",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.contract_error",
+    "inputs": null,
+    "outputs": "type[ContractError]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.build_contract_v2",
+    "module": "nvs_edge.contract_v2",
+    "name": "build_contract_v2",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.build_contract_v2",
+    "inputs": {
+      "keyword_only": {
+        "session_id": "str",
+        "binding": "Mapping[str, Any]",
+        "raw": "Mapping[str, Any]",
+        "positions": "Sequence[Mapping[str, Any]]",
+        "origin": "Mapping[str, Any]"
+      }
+    },
+    "outputs": "dict[str, Any]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.Unknown2",
+    "module": "nvs_edge.contract_v2",
+    "name": "Unknown2",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.unknown2",
+    "inputs": {
+      "source": "str",
+      "reason": "str"
+    },
+    "outputs": "Unknown2",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.layer_label",
+    "module": "nvs_edge.contract_v2",
+    "name": "layer_label",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.layer_label",
+    "inputs": {
+      "point": "str"
+    },
+    "outputs": "int | str",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.POINT_PATTERN",
+    "module": "nvs_edge.contract_v2",
+    "name": "POINT_PATTERN",
+    "condition": "capture_edge.load_capture_edge: wanted (existence check; observation uses its own pattern constant)",
+    "inputs": null,
+    "outputs": "Final[re.Pattern[str]]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.SPACE_RULE",
+    "module": "nvs_edge.contract_v2",
+    "name": "SPACE_RULE",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.space_rule",
+    "inputs": null,
+    "outputs": "Final[str]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.CONTRACT_VERSION_V2",
+    "module": "nvs_edge.contract_v2",
+    "name": "CONTRACT_VERSION_V2",
+    "condition": "capture_edge.load_capture_edge: wanted and compatibility check",
+    "inputs": null,
+    "outputs": "Final[int]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.MAX_DIMENSION",
+    "module": "nvs_edge.contract_v2",
+    "name": "MAX_DIMENSION",
+    "condition": "capture_edge.load_capture_edge: wanted and compatibility check against observation constants",
+    "inputs": null,
+    "outputs": "Final[int]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.instrument_record",
+    "module": "nvs_edge.contract_v2",
+    "name": "instrument_record",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.instrument_record",
+    "inputs": {
+      "states": "NDArray[np.float32]",
+      "raw_sha256": "str"
+    },
+    "outputs": "dict[str, Any]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_store.encode_raw",
+    "module": "nvs_edge.raw_store",
+    "name": "encode_raw",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.encode_raw",
+    "inputs": {
+      "states": "NDArray[np.float32]",
+      "created_at_ms": "int",
+      "dimension": "int (keyword-only)"
+    },
+    "outputs": "tuple[bytes, RawHeader]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_store.decode_raw",
+    "module": "nvs_edge.raw_store",
+    "name": "decode_raw",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.decode_raw",
+    "inputs": {
+      "file_bytes": "bytes",
+      "dimension": "int | None (keyword-only)"
+    },
+    "outputs": "tuple[NDArray[np.float32], RawHeader]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_store.RawCapture",
+    "module": "nvs_edge.raw_store",
+    "name": "RawCapture",
+    "condition": "edge_observe._load_nvs_edge: getattr RawCapture for EdgeObserver sessions",
+    "inputs": {},
+    "outputs": "type[RawCapture]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_nd.NAME",
+    "module": "nvs_edge.raw_nd",
+    "name": "NAME",
+    "condition": "capture_edge.load_capture_edge: wanted / instrument_name and compatibility check",
+    "inputs": null,
+    "outputs": "Final[str]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_nd.VERSION",
+    "module": "nvs_edge.raw_nd",
+    "name": "VERSION",
+    "condition": "capture_edge.load_capture_edge: wanted / instrument_version and compatibility check",
+    "inputs": null,
+    "outputs": "Final[int]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.raw_nd.settings_sha256",
+    "module": "nvs_edge.raw_nd",
+    "name": "settings_sha256",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.instrument_settings_sha256",
+    "inputs": {},
+    "outputs": "str",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.client.source_build_id",
+    "module": "nvs_edge.client",
+    "name": "source_build_id",
+    "condition": "capture_edge.load_capture_edge: wanted / CaptureEdge.source_build_id",
+    "inputs": {},
+    "outputs": "str",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.edge.Edge",
+    "module": "nvs_edge.edge",
+    "name": "Edge",
+    "condition": "edge_observe._load_nvs_edge: getattr Edge for EdgeObserver.open_session",
+    "inputs": {
+      "session_id": "str",
+      "key": "bytes",
+      "anchor_policy_sha256": "str",
+      "keyword_only": {
+        "base_url": "str | None",
+        "experiment_id": "str | None",
+        "run_id": "str | None",
+        "transport": "Transport | None",
+        "wiring_policy": "str",
+        "raw_capture": "RawCapture | None",
+        "tier": "str | None",
+        "tier_token": "str | None"
+      }
+    },
+    "outputs": "type[Edge]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.edge.EdgeTransportError",
+    "module": "nvs_edge.edge",
+    "name": "EdgeTransportError",
+    "condition": "edge_observe._load_nvs_edge: getattr EdgeTransportError for observe_token error handling",
+    "inputs": null,
+    "outputs": "type[EdgeTransportError]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.verify_contract_v2",
+    "module": "nvs_edge.verify_contract_v2",
+    "name": null,
+    "condition": "contract_check._load_edge: import the verify_contract_v2 submodule",
+    "inputs": null,
+    "outputs": null,
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract.contract_sha256",
+    "module": "nvs_edge.contract",
+    "name": "contract_sha256",
+    "condition": "contract_check._load_edge: wanted / EdgeContractApi.contract_sha256",
+    "inputs": {
+      "contract": "Mapping[str, Any]"
+    },
+    "outputs": "str",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.contract_v2.validate_contract_v2",
+    "module": "nvs_edge.contract_v2",
+    "name": "validate_contract_v2",
+    "condition": "contract_check._load_edge: wanted / EdgeContractApi.validate",
+    "inputs": {
+      "document": "Mapping[str, Any]"
+    },
+    "outputs": "None (raises ContractError)",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  },
+  {
+    "api_id": "nvs_edge.verify_contract_v2.verify_contract_v2",
+    "module": "nvs_edge.verify_contract_v2",
+    "name": "verify_contract_v2",
+    "condition": "contract_check._load_edge: wanted / EdgeContractApi.verify",
+    "inputs": {
+      "contract": "Mapping[str, Any]",
+      "keyword_only": {
+        "expected_contract_sha256": "str | None",
+        "raw_bytes": "Mapping[str, bytes] | None",
+        "instrument_records": "Mapping[str, Mapping[str, Any]] | None"
+      }
+    },
+    "outputs": "dict[str, Any]",
+    "kernel": "NVS-Kernel",
+    "change_policy": "変更・廃止は Registry と契約の版を上げてから"
+  }
+]
