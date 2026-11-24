@@ -24,9 +24,11 @@ tests/_edge_refs.py
 tests/test_boundary.py
 tests/test_contract_check.py
 tests/test_registry.py
+tests/test_release_workflow.py
 tests/fixtures/contract-facts-sample.json
 tests/fixtures/contract-v2-sample.json
 .github/workflows/ci.yml
+.github/workflows/release.yml
 .gitignore
 public-sync/allowlist.txt
 public-sync/export_public.py

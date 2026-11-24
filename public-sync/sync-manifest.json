@@ -4,13 +4,14 @@
   "audit_rules_sha256": "3b4df0f6c8b0efc04a88dc00751d0fc06c1c6d8d7c6e81e16510a60edbba4c76",
   "audit_tool_sha256": "93bcf82706cd8504defa9805e8d524ba084f04997e7ba57f5a2fa6eed410e4a4",
   "files": {
-    ".github/workflows/ci.yml": "039b7cae93a09c695d35da4c78bba98c7590ed6b5d492a39c2215fdd3eb829b5",
+    ".github/workflows/ci.yml": "778e248599ad907a684dc5dff7842b4c4b907a2003cb1f9017c00fe8989c7dd1",
+    ".github/workflows/release.yml": "194b2bf3ba585c85b23c546b716115aa4a4b97b8d82af0d3795c1cb8a731db4e",
     ".gitignore": "ce4c93885aacee13b071e5d29cb5657a6a2d8877acee159ab0ab4b8bea0e66b2",
     "LICENSE": "6f2bb15d455b08c7960a60cd1af11d67b2949f07ce2bb266982c5065b9e46bba",
     "NOTICE": "1221cd6432163be21f0fa178ee94bce6b2eb23a5ce829095fb4c9e977d754121",
     "README.md": "570ba5ba6e6a04d541dbda3ab2ff3a1f4d1c5003c7487af1e537150c90cd4fee",
     "kernel-api-registry.json": "94e9ac5f552e23c71f62f58550b5c071e7041f620931c1848469d0f41e1757a7",
-    "public-sync/allowlist.txt": "cc8970e2db5c32d8eedf73b76a4987bca22b383f033b0fa2cfd72bdd0f15b9f7",
+    "public-sync/allowlist.txt": "899e45e97c6675cb96742f9d079545342356e676776ebff3d497c6a61a989f91",
     "public-sync/audit-rules.toml": "3b4df0f6c8b0efc04a88dc00751d0fc06c1c6d8d7c6e81e16510a60edbba4c76",
     "public-sync/audit_artifacts.py": "93bcf82706cd8504defa9805e8d524ba084f04997e7ba57f5a2fa6eed410e4a4",
     "public-sync/check_allowlist.py": "1c6b3ffbd58bfc9ac18d0a5b2076257c48af381cf0ab493dc92c439cd0df85c1",
@@ -19,7 +20,7 @@
     "public-sync/tests/test_check_allowlist.py": "1129099eeca40d24760d82630685a7470b78d6288d1c0a4542c664e1ab8cd263",
     "public-sync/tests/test_export_public.py": "dfd4f60a7a905a8381e9a26871a46756f99ee4c068daaae64513b65a4383f32a",
     "public-sync/tests/test_sdist_config.py": "bb9a84f7522e283bfc8ffd77ca6851405a9b1709ddda37dc05084d0b33b5c90b",
-    "pyproject.toml": "c5c0d8059011566ce906b7d91ea5e00c54c5341a9601d4b8dda3523990192109",
+    "pyproject.toml": "6a7506dfdbc6c209899d859ffeb2fff0a0bd1136c3c27626bd104e0a680b92d6",
     "src/nvs_observation/__init__.py": "a9b84c8789a0d893280857e52b0211bc0a54eb7451f00c6f62ad4e4ffffcb202",
     "src/nvs_observation/adapter_session.py": "870bee50cb995cb556105da2ad5ac608e94c4c5843b101d2c2964d5c31d122f4",
     "src/nvs_observation/capture_check.py": "f1c08fd9333290eb750c56900fc0bdc4d58422f1b98a2e8b28eb9a3fa895649e",
@@ -39,6 +40,7 @@
     "tests/fixtures/contract-v2-sample.json": "a84f6f45b94cb26461d129d8df0a18e3379006ea5056a21ce6cac79eb63da222",
     "tests/test_boundary.py": "94f7ecf85911ca0ed497751d09cc7d56e01f314d4c21d52c7a0d20a6eb601e0b",
     "tests/test_contract_check.py": "42bc4f218f125ff434a52e4faecf88072de276c2e14b5dab366e03e9120fd4c0",
-    "tests/test_registry.py": "172537879d9e102749e3943a502495b6b1d8ef56c2bb71163f270288537b142c"
+    "tests/test_registry.py": "172537879d9e102749e3943a502495b6b1d8ef56c2bb71163f270288537b142c",
+    "tests/test_release_workflow.py": "a32863738e4563375ca5ba6476f9036d04f502760168a7f80482b96fcc7ea181"
   }
 }
