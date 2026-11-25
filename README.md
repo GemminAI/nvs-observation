@@ -5,7 +5,7 @@ Observation-side package for NVS. It provides the capture-record vocabulary
 observation contract, and an optional integration with `nvs_edge`.
 
 - Requires Python 3.12 or newer (3.12, 3.13, 3.14 are supported) and NumPy.
-- Install: `pip install nvs-observation`.
+- Install: `pip install nvs-observation==0.1.0.dev0`.
 - Without `nvs_edge`, everything that does not measure through it still works: the capture
   record, its checks and the mapping. Anything that needs `nvs_edge` reports that it is
   unavailable (a `DEFERRED` result) and does not raise.
